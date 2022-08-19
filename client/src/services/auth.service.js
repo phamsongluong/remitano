@@ -13,6 +13,11 @@ class AuthService {
   }
   logout() {
     localStorage.removeItem("user");
+    return axios
+      .get("https://luongpham-remitano.herokuapp.com/")
+      .then((response) => {
+        
+      });
   }
   register(username, email, password) {
     return axios.post(API_URL + "signup", {
